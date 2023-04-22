@@ -1,4 +1,4 @@
-# Coupled Flow Imitation Learning
+# CFIL: Coupled Flow Imitation Learning
 This repository contains the source code for [add link]
 
 
@@ -46,5 +46,5 @@ note, a few lines may seem superfluous, but this will help avoid mujoco-py error
 
 Some of the code above is from the following repositories:
 
-- [spinningup](https://github.com/openai/spinningup): We use their implementation of SAC
+- [spinningup](https://github.com/openai/spinningup): We use their implementation of SAC.
 - [normalizing_flows](https://github.com/kamenbliznashki/normalizing_flows):  We use their implementation of MAF.

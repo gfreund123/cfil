@@ -1,6 +1,10 @@
+# Coupled Flow Imitation Learning
+This repository contains the source code for [add link]
 
 
+# Environment Creation
 A full description for reproducing our exact environment:
+
 note, a few lines may seem superfluous, but this will help avoid mujoco-py errors.
 1. Download mujoco200 http://www.roboti.us/download.html
     1. wget https://www.roboti.us/download/mujoco200_linux.zip 
@@ -38,4 +42,9 @@ note, a few lines may seem superfluous, but this will help avoid mujoco-py error
 		1. First
 			1. conda install -c anaconda jupyter
 
+# Third-Party Code Credits
 
+Some of the code above is from the following repositories:
+
+- [spinningup](https://github.com/openai/spinningup): We use their implementation of SAC
+- [normalizing_flows](https://github.com/kamenbliznashki/normalizing_flows):  We use their implementation of MAF.

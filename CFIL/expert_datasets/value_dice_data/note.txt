@@ -1,0 +1,36 @@
+value dice code provides this command for gathering the data: https://github.com/google-research/google-research/tree/master/value_dice
+
+wget -P value_dice/datasets/ https://storage.googleapis.com/gresearch/value_dice/datasets/Ant-v2.npz
+wget -P value_dice/datasets/ https://storage.googleapis.com/gresearch/value_dice/datasets/HalfCheetah-v2.npz
+wget -P value_dice/datasets/ https://storage.googleapis.com/gresearch/value_dice/datasets/Hopper-v2.npz
+wget -P value_dice/datasets/ https://storage.googleapis.com/gresearch/value_dice/datasets/Walker2d-v2.npz
+
+from the value dice code the expert values seem to be taken from https://github.com/openai/imitation
+and from their values in the graphs in the paper, they seem to be identical with the values in page 13 of GAIL:
+
+
+in short, these expert datasets dont contain reward, but they appear to be:  
+Task Observation space Action space Random policy performance Expert performance
+
+halfcheetah-v1 17 (continuous) 6 (continuous) −282.43 ± 79.53 4463.46 ± 105.83
+Hopper-v1 11 (continuous) 3 (continuous) 14.47 ± 7.96 3571.38 ± 184.20
+Walker-v1 17 (continuous) 6 (continuous) 0.57 ± 4.59 6717.08 ± 845.62
+Ant-v1 111 (continuous) 8 (continuous) −69.68 ± 111.10 4228.37 ± 424.16
+
+according to the gail paper, these expert were trained with trpo 
+
+important to remeber that these are suboptimal compared to TD3 (at least for half cheetah)
+
+(also note that these data are on v2, hopefully doesnt make a difference)
+
+
+its problematic to get reward from just a state, as described here: https://github.com/deepmind/dm_control/issues/93
+but just need to go to gail code and run it myself
+
+
+ok it appears, the data comes from the datasets in expert_policies folder:https://github.com/openai/imitation/tree/master/expert_policies
+and it looks like reward is there. see for example by searching for data_subsamp_freq in the repository.
+see this line: https://github.com/openai/imitation/blob/8a2ed905e2ac54bda0f71e5ee364e90568e6d031/scripts/imitate_mj.py#L14
+
+go through, and see what precise trajectories value dice used from these files, and what there reward was,
+(because im only using a single trajectory so its important to know their exact reward) 

@@ -1,6 +1,7 @@
 # CFIL: Coupled Flow Imitation Learning
-This repository contains the source code for [add link]
+This repository contains the source code for "A Coupled Flow Approach to Imitation Learning": https://arxiv.org/abs/2305.00303.
 
+Accepted at the International Conference on Machine Learning (ICML) 2023.
 
 # Environment Creation
 A full description for reproducing our exact environment:

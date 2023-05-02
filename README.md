@@ -3,6 +3,8 @@ This repository contains the source code for "A Coupled Flow Approach to Imitati
 
 Accepted at the International Conference on Machine Learning (ICML) 2023.
 
+This work is together with Elad Sarafian and Sarit Kraus.
+
 # Environment Creation
 A full description for reproducing our exact environment:
 
